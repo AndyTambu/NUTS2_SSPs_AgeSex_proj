@@ -10,7 +10,7 @@ This repository accompanies the *Nature Scientific Data* Data Descriptor:
 **[Subnational disaggregation of SSP-coherent population projections for Europe]()**
 
 It provides the full set of scripts and replication materials required to reproduce all analyses, models, and derived results presented in the publication. The associated datasets are archived on **Zenodo** and can be accessed here:  
-**[Zenodo DOI or URL: XXXXX]**
+**10.5281/zenodo.18375524**
 
 Please ensure that all replication files are downloaded from Zenodo and extracted before starting the workflow.
 
@@ -32,7 +32,7 @@ Scripts are numbered to indicate the correct order of execution. Follow this seq
 ## Reproduction Workflow
 
 1. **Download replication files**  
-   Retrieve all files from the Zenodo repository (**XXXXX**) and unzip them into your working directory.
+   Retrieve all files from the Zenodo repository (**10.5281/zenodo.18375524**) and unzip them into your working directory.
 
 2. **Run preprocessing scripts**  
    Execute the scripts in numerical order from `00_01` through `00_05`.  
