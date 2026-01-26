@@ -50,3 +50,11 @@ rsconnect/
 
 
 *.csv
+*.rData
+
+data-raw/
+results/
+
+# R Files to expclude for the repo
+
+03_02_nuts_corrections_UK.R
