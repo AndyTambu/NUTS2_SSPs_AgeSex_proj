@@ -382,7 +382,7 @@ save(train_2015.2019_2010.2014_ctry,file = './data/train&test/train_2015.2019_20
 
 ## 2.1 2020/2024 - 2015/2019 ####
 
-test_2020.2024_2015.2019_ctry <- 
+train_2020.2024_2015.2019_ctry <- 
   demo_r_pjangroup_ageGroups_timeIntervals_dep1_lessAgeGroups %>% 
   filter(TOTAL != 0 & sex == 'T' & geo %in% always_present) %>% # here we filter for the presence in every interval (the ones which we use to train the model)
   dplyr::select(-UNK) %>% 
@@ -434,7 +434,7 @@ test_2020.2024_2015.2019_ctry <-
 #   distinct(geo)
 # 
 
-save(test_2020.2024_2015.2019_ctry,file = './data/train&test/test_2020.2024_2015.2019_ctry.RData')
+save(train_2020.2024_2015.2019_ctry,file = './data/train&test/train_2020.2024_2015.2019_ctry.RData')
 
 
 

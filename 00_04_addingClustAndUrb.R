@@ -15,7 +15,7 @@ names(train_2000.2004_1995.1999_ctry) <- gsub("\\+", "", names(train_2000.2004_1
 names(train_2005.2009_2000.2004_ctry) <- gsub("\\+", "", names(train_2005.2009_2000.2004_ctry))
 names(train_2010.2014_2005.2009_ctry) <- gsub("\\+", "", names(train_2010.2014_2005.2009_ctry))
 names(train_2015.2019_2010.2014_ctry) <- gsub("\\+", "", names(train_2015.2019_2010.2014_ctry))
-names(test_2020.2024_2015.2019_ctry) <- gsub("\\+", "", names(test_2020.2024_2015.2019_ctry))
+names(train_2020.2024_2015.2019_ctry) <- gsub("\\+", "", names(train_2020.2024_2015.2019_ctry))
 
 
 
@@ -59,7 +59,7 @@ train_2015.2019_2010.2014_ctry <- train_2015.2019_2010.2014_ctry %>%
               filter(period == '2015-2019'), by = 'geo')
 
 
-test_2020.2024_2015.2019_ctry <- test_2020.2024_2015.2019_ctry %>% 
+train_2020.2024_2015.2019_ctry <- train_2020.2024_2015.2019_ctry %>% 
   left_join(second_try_clustering, by = 'geo') %>% 
   mutate(cluster = as.character(cluster)) %>% 
   fastDummies::dummy_cols('cluster') %>% 

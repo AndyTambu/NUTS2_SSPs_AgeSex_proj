@@ -111,7 +111,7 @@ full_trainingData <- full_trainingData %>%
 
 
 # TEST data come into play ----
-full_testData <- test_2020.2024_2015.2019_ctry %>% 
+full_testData <- train_2020.2024_2015.2019_ctry %>% 
   filter(age.group==agroup) %>% 
   dplyr::select(-c(geo,age.group, interval,diff,lag1.tot_pop_NUTS2,lag2.tot_pop_NUTS2,
                    'quot_65', 'quot_45_64', 'quot_25_44', 'quot_15_24', 'quot_under15', 
@@ -442,7 +442,7 @@ full_trainingData_raw <-
   dplyr::select(-c(age.group, interval,diff,lag1.tot_pop_NUTS2,lag2.tot_pop_NUTS2)) %>% 
   filter(!is.na(y)&y != Inf) 
 
-full_testData_raw <- test_2020.2024_2015.2019_ctry %>% 
+full_testData_raw <- train_2020.2024_2015.2019_ctry %>% 
   filter(age.group==agroup) %>% 
   dplyr::select(-c(age.group, interval,diff,lag1.tot_pop_NUTS2,lag2.tot_pop_NUTS2))
 
@@ -1118,7 +1118,7 @@ test_r2
 # result_tbbl <- 
 #   result_tbbl %>% 
 #   cbind(y = standardized_data_test$y) %>% 
-#   cbind(cluster = test_2020.2024_2015.2019_ctry %>% 
+#   cbind(cluster = train_2020.2024_2015.2019_ctry %>% 
 #           dplyr::filter(age.group == 'under15') %>% pull(cluster))
 
 
